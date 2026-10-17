@@ -1,11 +1,11 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PipPlate — 100 Baby Foods &amp; BLW Solids Tracker</title>
-  <meta name="description" content="Track your baby's first 100 foods, monitor Big-9 allergen observation windows, scan plates with AI, and export parent-recorded Pediatrician Summary PDFs — 100% offline &amp; private." />
+  <title>PipPlate — Legal Hub: Privacy Policy, Medical Disclaimer, Terms &amp; Support</title>
+  <meta name="description" content="Official Legal Notice, Medical Disclaimer, Privacy Policy (COPPA, GDPR Art. 9, CCPA, MHMDA), Terms of Service, and Customer Support for PipPlate: 100 Baby Foods &amp; BLW." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
@@ -26,6 +26,8 @@
       --muted: #6B5F58;
     }
 
+    html { scroll-behavior: smooth; }
+
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       background: var(--bg);
@@ -36,6 +38,7 @@
       align-items: center;
       padding: 0 20px;
       -webkit-font-smoothing: antialiased;
+      line-height: 1.65;
     }
 
     body::before {
@@ -44,9 +47,9 @@
       top: -220px;
       left: 50%;
       transform: translateX(-50%);
-      width: 720px;
-      height: 720px;
-      background: radial-gradient(circle, rgba(194, 74, 46, 0.14) 0%, rgba(63, 107, 80, 0.08) 45%, transparent 70%);
+      width: 760px;
+      height: 760px;
+      background: radial-gradient(circle, rgba(194, 74, 46, 0.12) 0%, rgba(63, 107, 80, 0.06) 45%, transparent 70%);
       pointer-events: none;
       z-index: 0;
     }
@@ -55,34 +58,33 @@
       position: relative;
       z-index: 1;
       width: 100%;
-      max-width: 640px;
+      max-width: 780px;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      gap: 44px;
-      padding: 64px 0 56px;
+      gap: 32px;
+      padding: 56px 0 64px;
     }
 
-    /* Hero */
-    .hero {
+    /* Header */
+    .header {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 18px;
       text-align: center;
+      gap: 14px;
     }
 
     .icon {
-      width: 88px;
-      height: 88px;
-      border-radius: 24px;
+      width: 72px;
+      height: 72px;
+      border-radius: 20px;
       background: linear-gradient(135deg, #C24A2E, #E06D53);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 42px;
-      box-shadow: 0 12px 36px rgba(194, 74, 46, 0.28);
-      border: 2px solid rgba(255, 255, 255, 0.7);
+      font-size: 36px;
+      box-shadow: 0 10px 28px rgba(194, 74, 46, 0.24);
+      border: 2px solid rgba(255, 255, 255, 0.75);
     }
 
     .badge {
@@ -93,234 +95,211 @@
       color: var(--primary);
       background: var(--primary-soft);
       border: 1px solid rgba(194, 74, 46, 0.25);
-      padding: 6px 14px;
+      padding: 5px 14px;
       border-radius: 99px;
     }
 
     h1 {
-      font-size: clamp(28px, 6vw, 42px);
+      font-size: clamp(26px, 5vw, 36px);
       font-weight: 800;
-      line-height: 1.15;
-      letter-spacing: -0.025em;
-      color: var(--text);
+      letter-spacing: -0.02em;
+      line-height: 1.2;
     }
 
-    h1 span {
-      background: linear-gradient(90deg, #C24A2E, #3F6B50);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .sub {
-      font-size: 16px;
-      color: var(--muted);
-      line-height: 1.6;
-      max-width: 500px;
-    }
-
-    /* App Store button */
-    .cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: var(--primary);
-      color: #FFFFFF;
-      padding: 15px 28px;
-      border-radius: 14px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 15px;
-      transition: opacity 0.2s, transform 0.2s;
-      box-shadow: 0 6px 24px rgba(194, 74, 46, 0.28);
-    }
-
-    .cta:hover { opacity: 0.94; transform: translateY(-1px); }
-    .cta svg { flex-shrink: 0; }
-
-    /* Emergency & Medical Alert Banner */
-    .medical-alert {
-      width: 100%;
-      background: var(--danger-soft);
-      border: 1px solid rgba(179, 38, 30, 0.28);
-      border-left: 4px solid var(--danger);
-      border-radius: 16px;
-      padding: 18px 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .medical-alert-header {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--danger);
-    }
-
-    .medical-alert p {
+    .meta-date {
       font-size: 13px;
-      color: var(--text);
-      line-height: 1.55;
+      color: var(--muted);
     }
 
-    /* Features */
-    .features {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
+    /* Quick Jump Navigation */
+    .nav-pills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
       width: 100%;
-    }
-
-    .card {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 20px;
+      padding: 12px;
+      border-radius: 16px;
+      position: sticky;
+      top: 12px;
+      z-index: 10;
+      box-shadow: 0 4px 20px rgba(43, 36, 32, 0.06);
+    }
+
+    .nav-pills a {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--text);
+      text-decoration: none;
+      padding: 7px 13px;
+      border-radius: 10px;
+      background: var(--surface-tint);
+      border: 1px solid transparent;
+      transition: all 0.15s;
+    }
+
+    .nav-pills a:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    /* Emergency Alert */
+    .emergency-box {
+      background: var(--danger-soft);
+      border: 1.5px solid rgba(179, 38, 30, 0.35);
+      border-left: 6px solid var(--danger);
+      border-radius: 16px;
+      padding: 20px 22px;
       display: flex;
       flex-direction: column;
       gap: 8px;
-      box-shadow: 0 2px 10px rgba(43, 36, 32, 0.03);
     }
 
-    .card-icon {
-      font-size: 26px;
-      line-height: 1;
+    .emergency-box h2 {
+      font-size: 14px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--danger);
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
-    .card h3 {
-      font-size: 15px;
-      font-weight: 700;
+    .emergency-box p {
+      font-size: 13.5px;
       color: var(--text);
     }
 
-    .card p {
-      font-size: 13px;
-      color: var(--muted);
-      line-height: 1.5;
-    }
-
-    /* Steps & Sections */
-    .section-block {
-      width: 100%;
+    /* Legal Card Sections */
+    section.legal-card {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 20px;
-      padding: 24px;
+      padding: 28px;
       display: flex;
       flex-direction: column;
       gap: 16px;
+      scroll-margin-top: 84px;
+      box-shadow: 0 2px 12px rgba(43, 36, 32, 0.03);
     }
 
-    .section-title {
-      font-size: 17px;
+    section.legal-card h2 {
+      font-size: 19px;
       font-weight: 800;
       color: var(--text);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .steps {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .step {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-      padding: 14px 0;
+      padding-bottom: 12px;
       border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
-    .step:first-child { padding-top: 4px; }
-    .step:last-child { border-bottom: none; padding-bottom: 0; }
-
-    .step-num {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: var(--primary-soft);
-      border: 1px solid rgba(194, 74, 46, 0.35);
+    section.legal-card h3 {
+      font-size: 14.5px;
+      font-weight: 700;
       color: var(--primary);
-      font-size: 13px;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-
-    .step-text h4 { font-size: 14px; font-weight: 700; margin-bottom: 3px; color: var(--text); }
-    .step-text p { font-size: 13px; color: var(--muted); line-height: 1.5; }
-
-    /* Legal, Disclaimers & Compliance Box */
-    .legal-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      width: 100%;
-    }
-
-    .legal-item {
-      background: var(--surface-tint);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 16px;
-    }
-
-    .legal-item h4 {
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--text);
-      margin-bottom: 6px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .legal-item p, .legal-item ul {
-      font-size: 12.5px;
-      color: var(--muted);
-      line-height: 1.6;
-    }
-
-    .legal-item ul {
-      padding-left: 18px;
       margin-top: 6px;
     }
 
-    .legal-item li {
-      margin-bottom: 4px;
+    section.legal-card p,
+    section.legal-card li {
+      font-size: 13.5px;
+      color: var(--muted);
     }
+
+    section.legal-card strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    section.legal-card ul,
+    section.legal-card ol {
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .caps-clause {
+      background: var(--surface-tint);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 16px;
+      font-size: 12px !important;
+      color: var(--text) !important;
+      line-height: 1.55;
+    }
+
+    /* Data Table */
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12.5px;
+      text-align: left;
+    }
+
+    th, td {
+      padding: 11px 14px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    th {
+      background: var(--surface-tint);
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    tr:last-child td { border-bottom: none; }
+
+    /* Support Contact Box */
+    .support-box {
+      background: var(--surface-tint);
+      border: 1px solid rgba(194, 74, 46, 0.3);
+      border-radius: 14px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .support-box a {
+      color: var(--primary);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .support-box a:hover { text-decoration: underline; }
 
     /* Footer */
     footer {
       position: relative;
       z-index: 1;
       width: 100%;
-      max-width: 640px;
+      max-width: 780px;
       padding: 28px 0 48px;
+      border-top: 1px solid var(--border);
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
       text-align: center;
-      border-top: 1px solid var(--border);
     }
 
     .footer-links {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
+      gap: 18px;
     }
 
     footer a {
@@ -328,7 +307,6 @@
       font-weight: 600;
       color: var(--muted);
       text-decoration: none;
-      transition: color 0.2s;
     }
 
     footer a:hover { color: var(--primary); }
@@ -336,155 +314,223 @@
     footer p {
       font-size: 12px;
       color: var(--muted);
-      line-height: 1.5;
     }
 
-    @media (max-width: 480px) {
-      .features { grid-template-columns: 1fr; }
-      main { padding: 44px 0 40px; gap: 32px; }
+    @media (max-width: 560px) {
+      section.legal-card { padding: 20px; }
+      .nav-pills { position: static; }
     }
   </style>
 </head>
 <body>
   <main>
-    <!-- Hero -->
-    <div class="hero">
+    <!-- Header -->
+    <div class="header">
       <div class="icon">🥑</div>
-      <span class="badge">Available on the App Store</span>
-      <h1>Track Every First Food.<br /><span>Stay Calm About Allergens.</span></h1>
-      <p class="sub">The privacy-first companion for Baby-Led Weaning (BLW) and the 100 Foods Before One challenge. Log textures, monitor Big-9 allergen observation windows, scan plates with AI, and export a Pediatrician Summary PDF in one tap.</p>
-      <a class="cta" href="https://apps.apple.com/app/id6824033721" target="_blank" rel="noopener">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-        Download on the App Store
-      </a>
+      <span class="badge">Official Legal, Privacy &amp; Support Center</span>
+      <h1>PipPlate: 100 Baby Foods &amp; BLW</h1>
+      <p class="meta-date">Effective Date: October 10, 2026 &nbsp;•&nbsp; Last Updated: October 17, 2026 &nbsp;•&nbsp; Version 1.0</p>
     </div>
 
-    <!-- Urgent Medical & Emergency Banner -->
-    <div class="medical-alert" role="alert">
-      <div class="medical-alert-header">
-        <span>⚠️ Urgent Medical &amp; Emergency Notice</span>
-      </div>
-      <p><strong>PipPlate is a parent-recorded tracking journal, NOT a medical device.</strong> It does not provide medical advice, clinical diagnosis, or allergy prevention guarantees. If your baby exhibits signs of a severe allergic reaction or anaphylaxis (such as difficulty breathing, facial/lip/tongue swelling, persistent vomiting, hives, or severe lethargy), <strong>call your local emergency services (e.g., 911 / 112 / 999) immediately.</strong></p>
+    <!-- Sticky Section Navigation -->
+    <nav class="nav-pills" aria-label="Legal Navigation">
+      <a href="#medical-disclaimer">1. Medical &amp; Feeding Disclaimer</a>
+      <a href="#ai-disclaimer">2. AI Scanner Waiver</a>
+      <a href="#privacy-policy">3. Privacy Policy (COPPA/GDPR)</a>
+      <a href="#terms-of-use">4. Terms, Subscriptions &amp; Liability</a>
+      <a href="#clinical-citations">5. Clinical Citations</a>
+      <a href="#support">6. Support &amp; Data Deletion</a>
+    </nav>
+
+    <!-- Urgent Emergency Protocol Banner -->
+    <div class="emergency-box" role="alert">
+      <h2>🚨 Urgent Medical &amp; Anaphylaxis Emergency Protocol</h2>
+      <p><strong>PipPlate is a parent-recorded food journal and informational organization tool — NOT a medical device.</strong> If your infant or child exhibits any signs of an acute allergic reaction or anaphylaxis — including difficulty breathing, wheezing, swelling of the face, lips, tongue, or throat, generalized hives, repetitive vomiting, sudden diarrhea, or severe lethargy/floppiness — <strong>STOP using this application and call your local emergency medical services (e.g., 911 in the US/Canada, 112 in Europe/Türkiye, 999 in the UK, 119 in Japan) immediately.</strong></p>
     </div>
 
-    <!-- Key Features -->
-    <div class="features">
-      <div class="card">
-        <div class="card-icon">🥣</div>
-        <h3>100 Foods Checklist</h3>
-        <p>Track fruits, veggies, grains, proteins, and dairy across puree, mashed, and finger-food (BLW) textures.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">🛡️</div>
-        <h3>Big-9 Allergen Tracker</h3>
-        <p>Log milk, egg, peanut, tree nuts, wheat, soy, fish, shellfish &amp; sesame with configurable observation windows.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">📸</div>
-        <h3>2-Second AI Plate Scan</h3>
-        <p>Snap baby's meal to detect visible foods automatically. Every AI suggestion is parent-verified before saving.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">📋</div>
-        <h3>Pediatrician PDF Report</h3>
-        <p>Export a structured, parent-recorded summary of tried foods, textures, and logged reactions for doctor checkups.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">🔒</div>
-        <h3>100% On-Device &amp; Private</h3>
-        <p>No cloud accounts required. Baby profiles, meal logs, and reaction photos stay in your local SQLite database.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">🌍</div>
-        <h3>Dietary &amp; Cultural Swaps</h3>
-        <p>Built-in support for Standard, Halal, Kosher, and Vegetarian families across 7 languages.</p>
-      </div>
-    </div>
+    <!-- 1. MEDICAL, CLINICAL & INFANT FEEDING DISCLAIMER -->
+    <section class="legal-card" id="medical-disclaimer">
+      <h2>🩺 1. Medical Disclaimer &amp; Infant Feeding Safety Waiver</h2>
 
-    <!-- How It Works -->
-    <div class="section-block">
-      <div class="section-title">✨ How PipPlate Works</div>
-      <div class="steps">
-        <div class="step">
-          <div class="step-num">1</div>
-          <div class="step-text">
-            <h4>Log or Snap a Plate</h4>
-            <p>Pick from the 100 Foods catalog, add custom family foods, or snap a quick photo with the AI Plate Scanner.</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num">2</div>
-          <div class="step-text">
-            <h4>Monitor the Observation Window</h4>
-            <p>Set your customizable observation window (2 to 5 days, default 3 days) when introducing new major allergens.</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num">3</div>
-          <div class="step-text">
-            <h4>Record Acceptance &amp; Symptoms</h4>
-            <p>Log how baby liked the texture (Loved, OK, Disliked, Refused) and document any skin or tummy reactions with timestamps.</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num">4</div>
-          <div class="step-text">
-            <h4>Share Milestones &amp; Doctor Summaries</h4>
-            <p>Celebrate 25, 50, 75, and 100 foods with privacy-safe milestone cards, or print your Pediatrician Summary PDF.</p>
-          </div>
-        </div>
+      <h3>1.1 Not a Medical Device or Clinical Advice</h3>
+      <p>PipPlate: 100 Baby Foods &amp; BLW ("PipPlate", "the App", "we", "us", or "our") is provided strictly for general informational, educational, and personal record-keeping purposes. <strong>PipPlate is not a medical device, clinical decision support software, diagnostic instrument, or healthcare service, and has not been evaluated, cleared, or approved by the U.S. Food and Drug Administration (FDA), the European Medicines Agency (EMA), the Turkish Medicines and Medical Devices Agency (TİTCK), or any other regulatory authority.</strong></p>
+      <p>Nothing contained within PipPlate—including the 100 Foods catalog, texture preparation descriptions, choking hazard reminders, allergen trackers, observation window countdowns, AI plate scan suggestions, or exported PDF summaries—shall be construed as professional medical advice, diagnosis, treatment, or clinical certification. Use of the App does not create a physician-patient or dietitian-client relationship.</p>
+
+      <h3>1.2 Mandatory Pediatrician Consultation</h3>
+      <p>Every infant develops at a different pace and has unique nutritional and medical needs (including prematurity, eczema, reflux, dysphagia, or existing food allergies). <strong>You must consult a licensed pediatrician, pediatric allergist, or registered pediatric dietitian before:</strong></p>
+      <ul>
+        <li>Starting complementary solid foods or Baby-Led Weaning (BLW);</li>
+        <li>Introducing any of the major food allergens (cow's milk, egg, peanut, tree nuts, wheat, soy, fish, shellfish, sesame) or any other novel food;</li>
+        <li>Re-introducing a food after any suspected adverse reaction; or</li>
+        <li>Modifying your infant's diet based on cultural/dietary filters (Standard, Halal, Kosher, Vegetarian).</li>
+      </ul>
+
+      <h3>1.3 Infant Botulism Warning (Strict Prohibition of Honey Under 12 Months)</h3>
+      <p><strong>NEVER feed honey (raw, pasteurized, cooked, or baked into products) to an infant under 12 months of age.</strong> Honey can contain spores of <em>Clostridium botulinum</em>, which causes infant botulism—a rare but potentially fatal paralytic illness. Even if honey or a honey-containing food appears in a custom log or AI scan result, parents must strictly exclude it for babies under 1 year old.</p>
+
+      <h3>1.4 Choking Prevention, Supervision &amp; Texture Responsibility</h3>
+      <p>Gagging and choking are serious risks during solid food introduction. While PipPlate displays general age-grouped preparation notes (e.g., 6–9 months palmar grasp soft spears vs. 9–12 months pincer grasp bite-sized pieces), <strong>the parent or caregiver physically preparing and serving the meal bears 100% sole responsibility for verifying food temperature, softness, cut geometry, and safety:</strong></p>
+      <ul>
+        <li>Always test food softness between your thumb and index finger before serving.</li>
+        <li>Never leave an infant or toddler unattended while eating. Ensure the child is sitting fully upright in a secure highchair.</li>
+        <li>Never serve high-risk choking hazards whole, including whole nuts or seeds, thick globs of nut butter, whole grapes, cherry tomatoes, raw apple/carrot chunks, popcorn, hard crackers, marshmallows, or coin-sliced hot dogs/sausages.</li>
+      </ul>
+
+      <h3>1.5 Configurable Allergen Observation Window &amp; Pediatrician PDF Reports</h3>
+      <ul>
+        <li><strong>Observation Window Timer:</strong> PipPlate includes a user-configurable observation counter (adjustable between 2 and 5 days; default 3 days) between new allergen introductions. This timer is a user-controlled reminder tool, <strong>not</strong> a clinical protocol or guarantee of allergy safety. Allergic reactions can occur on the first exposure or after many previously tolerated exposures.</li>
+        <li><strong>Pediatrician Report (PDF):</strong> The PDF export feature generates a formatted summary of <strong>parent-recorded logs only</strong>. It is not a certified medical record or "doctor-approved" clinical diagnosis. We make no representations regarding the accuracy or completeness of data entered by the user.</li>
+      </ul>
+    </section>
+
+    <!-- 2. AI PLATE SCANNER WAIVER -->
+    <section class="legal-card" id="ai-disclaimer">
+      <h2>🤖 2. Artificial Intelligence (AI) Plate Scanner Disclaimer &amp; Hidden Allergen Warning</h2>
+
+      <h3>2.1 Automated Visual Estimation Only</h3>
+      <p>The "Snap-a-Plate" AI scanning feature utilizes computer vision models to suggest possible visible ingredients from a photograph of a plate. <strong>AI vision outputs are probabilistic estimates and frequently make errors, omissions, or misclassifications.</strong></p>
+
+      <h3>2.2 Inability to Detect Hidden Allergens or Cross-Contamination</h3>
+      <p class="caps-clause"><strong>CRITICAL ALLERGY WARNING:</strong> ARTIFICIAL INTELLIGENCE CANNOT SEE OR DETECT HIDDEN INGREDIENTS, BAKED-IN ALLERGENS, SAUCES, BROTHS, SPICES, COOKING OILS, DAIRY/BUTTER, EGG WASHES, SOY LECITHIN, WHEAT/GLUTEN, SESAME PASTE (TAHINI), PEANUT/TREE NUT TRACES, OR KITCHEN CROSS-CONTAMINATION. NEVER RELY ON PIPPLATE'S AI SCANNER TO DETERMINE WHETHER A FOOD IS SAFE FOR AN ALLERGIC INFANT.</p>
+      <p>Every AI scan result requires explicit parent review and manual confirmation before saving to your journal. You agree that you will independently verify all food labels, recipes, and preparation methods before feeding your child or logging an exposure.</p>
+    </section>
+
+    <!-- 3. PRIVACY POLICY -->
+    <section class="legal-card" id="privacy-policy">
+      <h2>🔐 3. Privacy Policy (COPPA, GDPR Art. 9, CCPA &amp; Health Data Compliance)</h2>
+
+      <h3>3.1 Core Privacy Principle: 100% Local-First Architecture</h3>
+      <p>PipPlate was engineered from the ground up to protect infant and family privacy. <strong>We do not require user accounts, email registration, or cloud profiles.</strong> All personal and health-related records you create in PipPlate—including your baby's name, birth date, solids start date, daily food tasting logs, acceptance ratings, symptom/reaction logs, and attached reaction photos—are stored <strong>exclusively on your local device</strong> inside an on-device SQLite database and sandboxed application file storage.</p>
+
+      <h3>3.2 Categories of Data &amp; How They Are Processed</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Data Category</th>
+              <th>Storage Location</th>
+              <th>Purpose &amp; Retention</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Baby Profile &amp; Health Logs</strong> (Name, DOB, Food Tastings, Allergen Exposures, Symptoms, Reaction Photos)</td>
+              <td><strong>100% Local Device Only</strong> (On-device SQLite &amp; local sandbox)</td>
+              <td>Used solely to render your in-app journal, milestone cards, and local PDF reports. <strong>Never uploaded to our servers.</strong> Retained on your device until you delete the app or tap "Delete All My Data".</td>
+            </tr>
+            <tr>
+              <td><strong>Snap-a-Plate Camera Photos</strong> (Optional AI Food Scan)</td>
+              <td><strong>Transient / Ephemeral Processing Only</strong></td>
+              <td>When you actively tap the shutter in Snap-a-Plate, the compressed food image is sent via encrypted HTTPS through our Cloudflare Worker proxy to the Google Gemini Vision API solely to return ingredient labels. <strong>Images are processed in memory and immediately discarded; they are never stored on our servers, never linked to your identity, and never used for facial recognition.</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Subscription &amp; Entitlement Status</strong> (PipPlate Plus)</td>
+              <td>Apple App Store / RevenueCat (Anonymous App User ID)</td>
+              <td>Processed via Apple StoreKit and RevenueCat solely to verify active PipPlate Plus entitlements and restore purchases across devices. No child health data is ever shared with RevenueCat.</td>
+            </tr>
+            <tr>
+              <td><strong>Crash &amp; Diagnostic Logs</strong></td>
+              <td>Sentry (Anonymized Technical Telemetry)</td>
+              <td>Crash stack traces, OS version, and device model used strictly to maintain ≥99.8% crash-free stability. Personal identifiers, baby names, and food/reaction logs are stripped before transmission.</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-    </div>
 
-    <!-- Mandatory Legal, Safety, Privacy & Regulatory Disclaimers -->
-    <div class="section-block" id="legal-disclaimers">
-      <div class="section-title">⚖️ Mandatory Disclaimers, Feeding Safety &amp; Legal Notices</div>
-      <div class="legal-grid">
+      <h3>3.3 Children's Online Privacy Protection Act (COPPA) Compliance</h3>
+      <p>PipPlate is a tool designed exclusively for <strong>adult parents and legal guardians (aged 18+)</strong> to log their own observations. The App is not directed at children under 13, and children do not interact with the App. Because all child profile information (first name/nickname, birth date, feeding logs, and photos) remains strictly local on the parent's device and is never transmitted to or stored on any remote server operated by us, <strong>we do not collect, store, sell, or share Personal Information of children under 13</strong> within the meaning of COPPA (15 U.S.C. §§ 6501–6506).</p>
 
-        <div class="legal-item">
-          <h4>🩺 1. Non-Medical Device Disclaimer (Apple Guideline 1.4.1 Compliance)</h4>
-          <p>PipPlate is an informational food diary and parent-tracking log designed solely to help caregivers organize meal notes. PipPlate is <strong>not</strong> a medical device, clinical decision support system, or diagnostic tool, and has not been evaluated by the FDA, EMA, or any regulatory health authority. All "Pediatrician Reports" generated by the app are strictly parent-recorded summaries and do not constitute official clinical records or medical advice. Always consult a qualified pediatrician, pediatric dietitian, or board-certified allergist before starting solids, introducing allergenic foods, or making dietary changes.</p>
-        </div>
+      <h3>3.4 GDPR Article 9 (EU/UK), KVKK (Türkiye) &amp; Washington MHMDA Compliance</h3>
+      <p>Under the EU/UK General Data Protection Regulation (GDPR Article 9), Turkish Law on the Protection of Personal Data (KVKK No. 6698), California Consumer Privacy Act (CCPA/CPRA), and the Washington My Health My Data Act (MHMDA), data concerning allergic reactions and infant nutrition may constitute Consumer Health Data or Special Category Data:</p>
+      <ul>
+        <li><strong>Data Controller of Local Logs:</strong> Because your logs reside solely on your device and we have zero technical access to read, view, or recover them, you act as the sole custodian of your local database.</li>
+        <li><strong>Legal Basis for Processing:</strong> Explicit user consent (GDPR Art. 6(1)(a) and Art. 9(2)(a)) obtained during onboarding and upon triggering camera permissions, and performance of a contract (GDPR Art. 6(1)(b)) for verifying subscription entitlements.</li>
+        <li><strong>Zero Sale, Zero Ad-Tracking, Zero Profiling:</strong> We never sell, rent, or monetize user data or health records. PipPlate contains zero third-party behavioral advertising trackers (no IDFA tracking).</li>
+      </ul>
 
-        <div class="legal-item">
-          <h4>🍼 2. Infant Feeding Safety, Choking Prevention &amp; Botulism Warning</h4>
-          <ul>
-            <li><strong>Infant Botulism Warning (No Honey Under 12 Months):</strong> Never serve honey or foods containing raw/cooked honey to infants under 12 months of age due to the risk of infant botulism.</li>
-            <li><strong>Choking Hazard &amp; Supervision:</strong> Always supervise your infant closely while eating. Ensure baby is seated upright in a highchair. Never serve whole nuts, whole grapes, cherry tomatoes, raw hard vegetables/fruits, popcorn, or coin-shaped hot dogs. Always prepare foods in age-appropriate softness and cut shapes (e.g., squish-testable spears for palmar grasp or bite-sized pieces for pincer grasp) as advised by your pediatrician.</li>
-            <li><strong>Configurable Observation Window:</strong> The allergen observation counter in PipPlate is a user-configurable tracking timer (2–5 days) and does not assert a mandatory clinical protocol. Follow your healthcare provider's specific allergen introduction schedule.</li>
-          </ul>
-        </div>
+      <h3>3.5 Device Permissions</h3>
+      <ul>
+        <li><strong>Camera (<code>NSCameraUsageDescription</code>):</strong> Requested only when you open Snap-a-Plate or take a reaction photo. Never records video or audio.</li>
+        <li><strong>Photo Library (<code>NSPhotoLibraryUsageDescription</code> / <code>NSPhotoLibraryAddUsageDescription</code>):</strong> Used only when you manually attach an existing photo to a log or save a Milestone Share Card / PDF report to your phone.</li>
+        <li><strong>Local Notifications:</strong> Scheduled locally on your device for optional allergen observation window check-ins and backup reminders (respecting 21:00–08:00 quiet hours).</li>
+      </ul>
 
-        <div class="legal-item">
-          <h4>🤖 3. AI Plate Scanner Limitation &amp; Hidden Allergen Warning</h4>
-          <p>The Snap-a-Plate AI feature provides automated visual estimates of visible foods only. <strong>AI cannot detect hidden ingredients, cross-contamination, cooking oils, spices, dairy, egg, soy, wheat, or nut traces mixed inside cooked dishes, baked goods, or sauces.</strong> Parents and caregivers must manually inspect, verify, and confirm all ingredients before serving food or saving a log. When you trigger a scan, the captured plate image is transmitted over encrypted HTTPS solely for immediate visual ingredient detection and is never stored on our servers, used to train AI models, or used for facial recognition.</p>
-        </div>
+      <h3>3.6 Backups, Export &amp; Right to Erasure ("Delete All My Data")</h3>
+      <p>You can exercise your right to data portability and erasure immediately inside the App without contacting us:</p>
+      <ul>
+        <li><strong>Portability:</strong> Go to <em>Settings → Backup &amp; Restore → Export Backup</em> to export a complete <code>.pipplate</code> JSON/ZIP archive of your local database.</li>
+        <li><strong>Instant Erasure:</strong> Go to <em>Settings → Danger Zone → Delete All My Data</em> to permanently and irreversibly wipe all baby profiles, food logs, reaction records, and settings from your device, or simply uninstall the App.</li>
+      </ul>
+    </section>
 
-        <div class="legal-item">
-          <h4>🔐 4. Child Privacy, COPPA, GDPR Art. 9 &amp; Health Data Protection</h4>
-          <p>PipPlate is built on a <strong>100% Local-First Architecture</strong> in strict compliance with the Children's Online Privacy Protection Act (COPPA), GDPR Article 9 (Special Categories of Personal Data), CCPA, and the Washington My Health My Data Act (MHMDA):</p>
-          <ul>
-            <li><strong>Zero Cloud Storage of Child Data:</strong> Your baby's name, birth date, tasting logs, symptom notes, and reaction photos are stored exclusively on your personal device inside a local SQLite database. We have no user accounts and no cloud database of your child's health records.</li>
-            <li><strong>Data Ownership &amp; Deletion:</strong> You retain 100% ownership of your data. You can export a full local backup (<code>.pipplate</code> JSON/ZIP) at any time or permanently erase all records from your device in one tap via <em>Settings → Danger Zone → Delete All My Data</em>.</li>
-          </ul>
-        </div>
+    <!-- 4. TERMS OF SERVICE, SUBSCRIPTIONS & LIMITATION OF LIABILITY -->
+    <section class="legal-card" id="terms-of-use">
+      <h2>⚖️ 4. Terms of Service, Subscriptions &amp; Limitation of Liability</h2>
 
-        <div class="legal-item">
-          <h4>💳 5. PipPlate Plus Subscription &amp; Apple Standard EULA Terms</h4>
-          <p>PipPlate offers an optional auto-renewing subscription (<strong>PipPlate Plus</strong> — Monthly or Annual) that unlocks unlimited AI plate scans, Pediatrician Summary PDF exports, multiple baby profiles (for twins/siblings), and watermark-free milestone share cards. Manual food logging, the 100 Foods catalog, and local backups remain free. Payment will be charged to your Apple ID account at confirmation of purchase. Subscriptions automatically renew unless canceled at least 24 hours before the end of the current billing period. You can manage and cancel your subscriptions in your App Store Account Settings after purchase.</p>
-        </div>
+      <h3>4.1 Acceptance of Terms &amp; Apple Standard EULA</h3>
+      <p>By downloading, installing, or using PipPlate, you agree to be bound by these Terms of Service and the <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener" style="color:var(--primary);font-weight:600;">Apple Licensed Application End User License Agreement (Standard EULA)</a>. If you do not agree to these terms and the Medical Disclaimer above, do not use the App.</p>
 
+      <h3>4.2 PipPlate Plus Auto-Renewing Subscriptions</h3>
+      <ul>
+        <li><strong>Free vs. Plus Features:</strong> PipPlate provides free access to the 100 Foods catalog, manual meal/allergen/reaction logging, local backups, and basic daily AI scan quotas. Upgrading to <strong>PipPlate Plus</strong> (offered as Monthly at $4.99/month or Annual at $29.99/year, or local currency equivalent as displayed in the App Store) unlocks unlimited AI plate scans (subject to fair-use anti-abuse limits), 1-click Pediatrician PDF Report exports, multiple baby profiles, and watermark-free milestone share cards.</li>
+        <li><strong>Billing &amp; Auto-Renewal:</strong> Payment is charged to your Apple ID account at confirmation of purchase. Subscriptions automatically renew unless auto-renew is turned off at least 24 hours before the end of the current period. Your account will be charged for renewal within 24 hours prior to the end of the current period.</li>
+        <li><strong>Cancellation &amp; Refunds:</strong> You can manage or cancel your subscription at any time in your iOS <em>Settings → [Your Name] → Subscriptions</em>. Deleting the App from your device does <strong>not</strong> automatically cancel an active Apple subscription. All refund requests are handled directly by Apple Support under Apple's App Store policies.</li>
+      </ul>
+
+      <h3>4.3 Data Loss Responsibility (Local-First Storage)</h3>
+      <p>Because PipPlate stores your baby's records exclusively on your device for maximum privacy, <strong>we cannot recover your data from our servers if your phone is lost, stolen, damaged, factory-reset, or if you uninstall the App without exporting a backup.</strong> You are solely responsible for maintaining regular backups using the in-app <em>Export Backup</em> tool or your device's encrypted iCloud/system backup.</p>
+
+      <h3>4.4 Disclaimer of Warranties ("AS-IS" and "AS-AVAILABLE")</h3>
+      <p class="caps-clause">TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, PIPPLATE IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, CLINICAL ACCURACY, NON-INFRINGEMENT, OR ERROR-FREE OPERATION. WE DO NOT WARRANT THAT FOOD CATALOG DATA, ALLERGEN CLASSIFICATIONS, OR AI VISUAL RECOGNITION RESULTS WILL BE ACCURATE, COMPLETE, RELIABLE, OR SAFE FOR YOUR CHILD.</p>
+
+      <h3>4.5 Limitation of Liability &amp; Indemnification</h3>
+      <p class="caps-clause">TO THE FULLEST EXTENT PERMITTED BY LAW, IN NO EVENT SHALL THE DEVELOPER OF PIPPLATE, ITS AFFILIATES, LICENSORS, OR SERVICE PROVIDERS BE LIABLE FOR ANY PERSONAL INJURY, ALLERGIC REACTION, ANAPHYLAXIS, CHOKING INCIDENT, ILLNESS, DEATH, DATA LOSS, OR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING OUT OF OR RELATED TO YOUR USE OF OR INABILITY TO USE THE APP, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. OUR TOTAL CUMULATIVE LIABILITY TO YOU FOR ALL CLAIMS SHALL NOT EXCEED THE AMOUNT YOU ACTUALLY PAID FOR THE APP IN THE TWELVE (12) MONTHS PRECEDING THE CLAIM OR TEN U.S. DOLLARS ($10.00), WHICHEVER IS GREATER.</p>
+      <p>You agree to indemnify, defend, and hold harmless PipPlate and its developer from any claims, liabilities, damages, losses, and expenses arising out of your misuse of the App, violation of these Terms, or feeding decisions made for any child.</p>
+    </section>
+
+    <!-- 5. CLINICAL & PUBLIC HEALTH CITATIONS -->
+    <section class="legal-card" id="clinical-citations">
+      <h2>📚 5. Public Health &amp; Nutritional Reference Sources (Apple Guideline 1.4.1)</h2>
+      <p>The general informational food categories, Big-9 allergen classifications, and safe texture/choking-prevention reminders referenced within PipPlate are informed by publicly available parent education resources from the following recognized public health institutions:</p>
+      <ul>
+        <li><strong>American Academy of Pediatrics (AAP):</strong> Infant Food and Feeding Guidelines, Choking Prevention, and Complementary Feeding Recommendations (<a href="https://www.healthychildren.org" target="_blank" rel="noopener" style="color:var(--primary);">healthychildren.org</a>).</li>
+        <li><strong>U.S. Centers for Disease Control and Prevention (CDC):</strong> <em>When, What, and How to Introduce Solid Foods</em> &amp; Infant Botulism Honey Prohibition (<a href="https://www.cdc.gov/nutrition/infantandtoddlernutrition/" target="_blank" rel="noopener" style="color:var(--primary);">cdc.gov/nutrition</a>).</li>
+        <li><strong>U.S. Food and Drug Administration (FDA) / FALCPA &amp; FASTER Act:</strong> Major Food Allergens ("Big 9": Milk, Eggs, Fish, Crustacean Shellfish, Tree Nuts, Peanuts, Wheat, Soybeans, and Sesame) (<a href="https://www.fda.gov/food/food-labeling-nutrition/food-allergies" target="_blank" rel="noopener" style="color:var(--primary);">fda.gov</a>).</li>
+        <li><strong>World Health Organization (WHO):</strong> <em>Guideline for Complementary Feeding of Infants and Young Children 6–23 Months of Age</em> (<a href="https://www.who.int" target="_blank" rel="noopener" style="color:var(--primary);">who.int</a>).</li>
+        <li><strong>European Society for Paediatric Gastroenterology, Hepatology and Nutrition (ESPGHAN):</strong> Position Paper on Complementary Feeding (<a href="https://www.espghan.org" target="_blank" rel="noopener" style="color:var(--primary);">espghan.org</a>).</li>
+      </ul>
+      <p><em>Note: Citation of these public health bodies is for informational transparency only and does not imply endorsement, affiliation, or certification of PipPlate by the AAP, CDC, FDA, WHO, or ESPGHAN.</em></p>
+    </section>
+
+    <!-- 6. CUSTOMER SUPPORT, FAQ & CONTACT -->
+    <section class="legal-card" id="support">
+      <h2>💬 6. Customer Support, FAQ &amp; Legal Contact</h2>
+      <p>Need help with your backup file, PipPlate Plus subscription, or have a privacy/legal inquiry? Review our quick answers below or reach out directly.</p>
+
+      <ul>
+        <li><strong>How do I restore my PipPlate Plus subscription on a new iPhone?</strong> Open PipPlate → go to <em>Settings → PipPlate Membership</em> (or open the upgrade screen) and tap <strong>Restore Purchases</strong> while signed into the same Apple ID.</li>
+        <li><strong>How do I move my baby's food logs to a new device or share with a partner?</strong> Go to <em>Settings → Backup &amp; Restore → Export Backup</em> to generate a <code>.pipplate</code> backup snapshot, send it via AirDrop/Files to the second device, and tap <em>Import Backup</em>.</li>
+        <li><strong>How do I delete all my data?</strong> Open <em>Settings → Danger Zone → Delete All My Data</em> and confirm. Because all data is stored locally on your device, it is wiped immediately.</li>
+      </ul>
+
+      <div class="support-box">
+        <p><strong>Official Support &amp; Privacy Contact:</strong></p>
+        <p>🌐 Support Portal: <a href="https://paycyl-hq.github.io/pipdrop-support/">https://paycyl-hq.github.io/pipdrop-support/</a></p>
+        <p>📩 GitHub Issues / Support Inquiries: <a href="https://github.com/paycyl-hq/pipdrop-support/issues" target="_blank" rel="noopener">Submit a Support Ticket</a></p>
       </div>
-    </div>
+    </section>
   </main>
 
   <footer>
     <div class="footer-links">
-      <a href="https://paycyl-hq.github.io/pipdrop-support/">Privacy Policy</a>
-      <a href="https://paycyl-hq.github.io/pipdrop-support/">Support</a>
-      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Terms of Use (Apple EULA)</a>
+      <a href="#medical-disclaimer">Medical Disclaimer</a>
+      <a href="#privacy-policy">Privacy Policy</a>
+      <a href="#terms-of-use">Terms of Service</a>
+      <a href="#support">Support</a>
+      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Apple Standard EULA</a>
     </div>
-    <p>© 2026 PipPlate. All rights reserved. PipPlate is a parent-tracking food journal, not a medical device.</p>
+    <p>© 2026 PipPlate. All rights reserved. PipPlate is a parent-recorded food journal, not a medical device. Apple, the Apple logo, iPhone, and App Store are trademarks of Apple Inc.</p>
   </footer>
 </body>
 </html>
+```
